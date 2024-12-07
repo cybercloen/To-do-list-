@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-check-circle"></i> Task Master</h1>
+        
+        <div class="input-section">
+            <input type="text" id="taskInput" placeholder="What needs to be done?" aria-label="New task input">
+            <button id="addTask" aria-label="Add task">
+                <i class="fas fa-plus"></i> Add Task
+            </button>
+        </div>
+
+        <div class="filter-section">
+            <label for="filterTasks">Filter Tasks:</label>
+            <select id="filterTasks" aria-label="Filter tasks">
+                <option value="all">All Tasks</option>
+                <option value="pending">Pending</option>
+                <option value="completed">Completed</option>
+            </select>
+        </div>
+
+        <div class="backup-section">
+            <button id="exportTasks" class="secondary-btn">
+                <i class="fas fa-download"></i> Export Tasks
+            </button>
+            <button id="importTasks" class="secondary-btn">
+                <i class="fas fa-upload"></i> Import Tasks
+            </button>
+            <input type="file" id="fileInput" accept=".json" style="display: none">
+        </div>
+
+        <ul id="taskList" aria-label="Task list"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
